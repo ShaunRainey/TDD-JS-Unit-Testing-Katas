@@ -3,20 +3,20 @@ function rotateArray (arr, num) {
   // Your code here
   let newArray = [];
 
-  for(let i=0; i< arr.length; i++){
-    let currentIndex = i;
-    let newIndex = i + num;
-    if(newIndex > arr.length-1){newIndex = (newIndex % arr.length)}
-    // console.log("i: ", i, " current index of value: ", currentIndex, " new index will be: ", newIndex)
-    newArray[newIndex] = arr[i];
-    // console.log("newArray: ", newArray) 
+  let revArray = arr.slice(0).reverse();
+  
+  for(let i=0; i< revArray.length; i++){
+
+    let newIndex = num < 0 ? i - num : i + num; 
+    if(num < 0){
+      if(newIndex > arr.length-1){newIndex = (newIndex % revArray.length)}
+        newArray[newIndex] = revArray[i];
+    } else {
+      if(newIndex > arr.length-1){newIndex = (newIndex % arr.length)}
+        newArray[newIndex] = arr[i];
+    }
   }
-  console.log(arr)
-  return newArray
+    return  num < 0 ? newArray.reverse() : newArray;
 };
 
 module.exports =  rotateArray;
-
-console.log(rotateArray([1, 2, 3], 1)) // [3, 1, 2] 
-console.log(rotateArray([1, 2, 3, 4, 5], 3)) // [3, 4, 5, 1, 2]
-
