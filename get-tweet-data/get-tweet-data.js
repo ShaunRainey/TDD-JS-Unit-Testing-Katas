@@ -1,8 +1,12 @@
-// Please do not change the name of this function
+/*getTweetData(tweet)
+
+Takes a string representing a tweet and returns an object containing key data about the tweet, including its length, the count and array of unique hashtags, and the count and array of unique mentions.
+
+*/
 function getTweetData (tweet) {
   // Your code here
   let tags = [];
-  const tagPattern = /#\w+/g
+  const tagPattern = /#\w+/g;
 
   if(tweet.match(tagPattern)){
     const tagMatch = tweet.match(tagPattern); 
@@ -12,7 +16,7 @@ function getTweetData (tweet) {
   }
   
   let mentions = [];
-  const mentionPattern = /@\w+/g
+  const mentionPattern = /@\w+/g;
 
   if(tweet.match(mentionPattern)){
     const mentionMatch = tweet.match(mentionPattern);

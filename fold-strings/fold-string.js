@@ -1,11 +1,16 @@
-// Please do not change the name of this function
+/*foldString(str)
+
+Takes a string and reverses the letters in each word internally, while keeping the sentence order of the words intact.
+
+For words with an odd number of letters, the middle letter remains in place. */
+
 function foldString (str) {
   // Your code here
 
   let returnString = "";
 
-  let pattern = /\w+/g
-  let match = str.match(pattern)
+  let pattern = /\w+/g;
+  let match = str.match(pattern);
 
   match.forEach((word) => {
   let strArray = word.split("");
@@ -31,7 +36,7 @@ function foldString (str) {
   }
 
   returnString += firstArray.reverse().join("");
-  if(strArray.length %2 !== 0){returnString += str[Math.floor(str.length/2)]}
+  if(strArray.length %2 !== 0){returnString += str[Math.floor(str.length/2)];}
   returnString += secondArray.reverse().join("") + " ";
 })
 

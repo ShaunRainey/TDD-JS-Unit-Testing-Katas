@@ -1,4 +1,11 @@
-// Please do not change the name of this function
+/*dnaPairs(dna)
+
+Takes a string representing a DNA sequence and returns a nested array for each base, containing the base paired with its complement.
+
+In DNA, C pairs with G, and T pairs with A.
+
+*/
+
 function dnaPairs(dna) {
   // Write your code here
   let newArray = [];

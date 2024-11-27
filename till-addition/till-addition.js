@@ -1,4 +1,8 @@
-// Please do not change the name of this function
+/*tillAddition(cashContents)
+
+Takes an object representing the cash contents of a till, where the keys are denomination names and the values are the quantity of each denomination, and returns the total amount in the till as a string formatted into pounds and pence.
+
+*/
 function tillAddition (cash) {
   // Your code here
 
@@ -21,7 +25,7 @@ function tillAddition (cash) {
   let total = 0;
 
   for(let value in cash){
-    total += values[value] * cash[value]
+    total += values[value] * cash[value];
   }
 
   return `£${total.toFixed(2)}`;

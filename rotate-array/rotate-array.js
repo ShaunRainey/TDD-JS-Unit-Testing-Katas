@@ -1,4 +1,10 @@
-// Please do not change the name of this function
+/*rotateArray(arr, num)
+
+Rotates the elements of an array by a specified number of positions. The function takes an array and a number, and returns the rotated array.
+
+If num is positive, values rotate to the right. If num is negative, values rotate to the left. 
+
+*/
 function rotateArray (arr, num) {
   // Your code here
   let newArray = [];

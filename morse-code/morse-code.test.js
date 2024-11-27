@@ -3,13 +3,13 @@ const morseCode = require("./morse-code")
 describe("MorseCode to String", () => {
     test("Can translate single characters", () => {
         let output = morseCode("--...",false);
-        expect(output).toBe("7")
+        expect(output).toBe("7");
         output = morseCode("..",false);
-        expect(output).toBe("I")
+        expect(output).toBe("I");
         output = morseCode("..-.",false);
-        expect(output).toBe("F")
+        expect(output).toBe("F");
         output = morseCode("-.",false);
-        expect(output).toBe("N")
+        expect(output).toBe("N");
     })
     test("Can translate single words", () => {
         let output = morseCode(".... . .-.. .-.. ---",false);
@@ -26,7 +26,7 @@ describe("MorseCode to String", () => {
 describe("String to morse code", () => {
     test("Can translate single characters", () => {
         let output = morseCode("7",true);
-        expect(output).toBe("--...")
+        expect(output).toBe("--...");
     })
     test("Can translate single words", () => {
         let output = morseCode("HELLO",true);

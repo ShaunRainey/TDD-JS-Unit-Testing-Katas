@@ -1,4 +1,8 @@
-// Please do not change the name of this function
+/*calculateDivisors(num)
+
+Takes a number num and returns the sum of all multiples of 3 and 5 below that number. 
+
+*/
 function calculateDivisors(num) {
   // Your code here
   let count = 0;
